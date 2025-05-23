@@ -9,7 +9,6 @@ import {
 } from '@chakra-ui/react';
 import { keyframes } from '@emotion/react';
 import { useNavigate } from '@tanstack/react-router';
-import { useQuery } from '@tanstack/react-query';
 import { useTranslation } from 'react-i18next';
 
 export const HomePage = () => {
@@ -17,15 +16,6 @@ export const HomePage = () => {
   const navigate = useNavigate();
   const spin = keyframes`from {transform: rotate(0deg)}; to {transform: rotate(360deg)}`;
   const spinAnimation = `${spin} infinite 2s linear`;
-
-  const { data, isLoading, error } = useQuery({
-    queryKey: ['data'],
-    queryFn: () => fetch('/api/data').then((res) => res.json()),
-  });
-
-  if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error.message}</div>;
-  if (data) console.log(data);
 
   return (
     <Center h="100vh" w="100vw">

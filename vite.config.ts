@@ -9,9 +9,4 @@ export default defineConfig({
     react(),
     tsconfigPaths(),
   ],
-  server: {
-    proxy: {
-      '/api': 'http://localhost:8000',
-    },
-  },
 });
