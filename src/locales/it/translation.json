@@ -1,0 +1,7 @@
+{
+    "WELCOME_TITLE": "Bevenuto nella tua nuova app!",
+    "WELCOME_DESCRIPTION_1": "Questa è una nuova app creata con Vite, React e Chakra UI.",
+    "WELCOME_DESCRIPTION_2": "Puoi iniziare a costruire la tua app da qui.",
+    "WELCOME_DESCRIPTION_3": "Esplora la documentazione di Chakra UI per ulteriori componenti e stili.",
+    "WELCOME_DESCRIPTION_4": "Happy coding!"
+}

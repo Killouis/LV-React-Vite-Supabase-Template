@@ -1,0 +1,9 @@
+{
+  "imports": {
+    "oak": "jsr:@oak/oak",
+    "@faker-js/faker": "npm:@faker-js/faker"
+  },
+  "tasks": {
+    "start:server": "deno run --allow-net --watch api/main.ts"
+  }
+}
