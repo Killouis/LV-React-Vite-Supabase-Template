@@ -5,6 +5,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { AuthProvider, useAuth } from './auth/AuthProvider.tsx';
 import { ColorModeProvider } from './components/ui/color-mode.tsx';
+import { Toaster } from './components/ui/toaster.tsx';
 import './i18n/config';
 import { routeTree } from './routeTree.gen.ts';
 
@@ -29,6 +30,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <QueryClientProvider client={queryClient}>
           <AuthProvider>
             <App />
+            <Toaster />
           </AuthProvider>
         </QueryClientProvider>
       </ColorModeProvider>

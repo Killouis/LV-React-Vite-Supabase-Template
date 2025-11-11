@@ -4,7 +4,9 @@ import { User } from './User';
 export type AuthContextType = {
   isAuthenticated: boolean;
   user: User | null;
-  login: (email: string) => Promise<User | null>;
+  login: (email: string, password?: string) => Promise<User | null>;
   logout: () => Promise<void>;
   hasRole: (role: Role) => boolean;
+  signUp: (email: string, password?: string) => Promise<User | null>;
+  signInWithGoogle: () => Promise<void>;
 };

@@ -13,3 +13,11 @@
 - yarn add -D @tanstack/router-plugin
 - mkdir src/routes
 - yarn add react-i18next i18next i18next-http-backend i18next-browser-languagedetector
+
+## Supabase Admin User Role
+
+```sql
+UPDATE auth.users
+SET raw_app_meta_data = raw_app_meta_data || '{"roles": ["admin"]}'::jsonb
+WHERE id = 'XXXXX-XXXXX-XXXXX-XXXXX-XXXXX';
+```
