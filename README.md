@@ -4,15 +4,16 @@
 
 - npm create vite@latest my-app-template -- --template react-ts
 - cd my-app-template
-- yarn
-- yarn add @chakra-ui/react @emotion/react
+- pnpm install
+- pnpm install @chakra-ui/react @emotion/react
 - npx @chakra-ui/cli snippet add
-- yarn add -D vite-tsconfig-paths
-- yarn add @tanstack/react-query
-- yarn add @tanstack/react-router
-- yarn add -D @tanstack/router-plugin
+- pnpm install -D vite-tsconfig-paths
+- pnpm install @tanstack/react-query
+- pnpm install @tanstack/react-router
+- pnpm install -D @tanstack/router-plugin
 - mkdir src/routes
-- yarn add react-i18next i18next i18next-http-backend i18next-browser-languagedetector
+- pnpm install react-i18next i18next i18next-http-backend i18next-browser-languagedetector
+- pnpm install @supabase/supabase-js
 
 ## Supabase Admin User Role
 
@@ -21,3 +22,8 @@ UPDATE auth.users
 SET raw_app_meta_data = raw_app_meta_data || '{"roles": ["admin"]}'::jsonb
 WHERE id = 'XXXXX-XXXXX-XXXXX-XXXXX-XXXXX';
 ```
+
+## .env.local
+
+VITE_SUPABASE_URL=
+VITE_SUPABASE_ANON_KEY=
